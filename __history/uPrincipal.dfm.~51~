@@ -54,7 +54,7 @@ object frmPrincipal: TfrmPrincipal
     TabOrder = 1
     ExplicitWidth = 841
     object btnFechar: TBitBtn
-      Left = 909
+      Left = 744
       Top = 28
       Width = 75
       Height = 25

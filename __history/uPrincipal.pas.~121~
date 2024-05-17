@@ -109,7 +109,6 @@ begin
     end;
   finally
     RESTClient.ResetToDefaults;
-    RESTRequest.ResetToDefaults;
   end;
 end;
 

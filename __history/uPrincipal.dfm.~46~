@@ -4,7 +4,7 @@ object frmPrincipal: TfrmPrincipal
   BorderStyle = bsNone
   Caption = 'CONSULTA'
   ClientHeight = 619
-  ClientWidth = 1005
+  ClientWidth = 911
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -16,7 +16,7 @@ object frmPrincipal: TfrmPrincipal
   object pnlHeader: TPanel
     Left = 0
     Top = 0
-    Width = 1005
+    Width = 911
     Height = 80
     Align = alTop
     BevelOuter = bvNone
@@ -45,7 +45,7 @@ object frmPrincipal: TfrmPrincipal
   object pnlFooter: TPanel
     Left = 0
     Top = 539
-    Width = 1005
+    Width = 911
     Height = 80
     Align = alBottom
     BevelOuter = bvNone
@@ -54,7 +54,7 @@ object frmPrincipal: TfrmPrincipal
     TabOrder = 1
     ExplicitWidth = 841
     object btnFechar: TBitBtn
-      Left = 909
+      Left = 744
       Top = 28
       Width = 75
       Height = 25
@@ -66,15 +66,14 @@ object frmPrincipal: TfrmPrincipal
   object pnlBody: TPanel
     Left = 0
     Top = 80
-    Width = 1005
+    Width = 911
     Height = 459
     Align = alClient
     BevelOuter = bvSpace
     Color = 16768959
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 86
-    ExplicitWidth = 911
+    ExplicitWidth = 841
     object edtRazaoSocial: TLabeledEdit
       Left = 8
       Top = 22
@@ -148,7 +147,7 @@ object frmPrincipal: TfrmPrincipal
       Text = ''
     end
     object edtIE: TLabeledEdit
-      Left = 845
+      Left = 685
       Top = 22
       Width = 139
       Height = 23
@@ -160,8 +159,8 @@ object frmPrincipal: TfrmPrincipal
       Text = ''
     end
     object edtIEAtivo: TLabeledEdit
-      Left = 845
-      Top = 62
+      Left = 831
+      Top = 22
       Width = 73
       Height = 23
       EditLabel.Width = 45
@@ -232,7 +231,7 @@ object frmPrincipal: TfrmPrincipal
       Text = ''
     end
     object edtTelefone: TLabeledEdit
-      Left = 63
+      Left = 8
       Top = 142
       Width = 105
       Height = 23
@@ -241,66 +240,6 @@ object frmPrincipal: TfrmPrincipal
       EditLabel.Caption = 'TELEFONE'
       ReadOnly = True
       TabOrder = 13
-      Text = ''
-    end
-    object edtDDD: TLabeledEdit
-      Left = 8
-      Top = 142
-      Width = 49
-      Height = 23
-      EditLabel.Width = 24
-      EditLabel.Height = 15
-      EditLabel.Caption = 'DDD'
-      ReadOnly = True
-      TabOrder = 14
-      Text = ''
-    end
-    object edtDDD2: TLabeledEdit
-      Left = 184
-      Top = 142
-      Width = 49
-      Height = 23
-      EditLabel.Width = 30
-      EditLabel.Height = 15
-      EditLabel.Caption = 'DDD2'
-      ReadOnly = True
-      TabOrder = 15
-      Text = ''
-    end
-    object edtTelefone2: TLabeledEdit
-      Left = 239
-      Top = 142
-      Width = 105
-      Height = 23
-      EditLabel.Width = 60
-      EditLabel.Height = 15
-      EditLabel.Caption = 'TELEFONE2'
-      ReadOnly = True
-      TabOrder = 16
-      Text = ''
-    end
-    object edtEmail: TLabeledEdit
-      Left = 350
-      Top = 142
-      Width = 257
-      Height = 23
-      EditLabel.Width = 34
-      EditLabel.Height = 15
-      EditLabel.Caption = 'EMAIL'
-      ReadOnly = True
-      TabOrder = 17
-      Text = ''
-    end
-    object edtSituacaoCadastral: TLabeledEdit
-      Left = 684
-      Top = 22
-      Width = 140
-      Height = 23
-      EditLabel.Width = 124
-      EditLabel.Height = 15
-      EditLabel.Caption = 'SITUA'#199#195'O CADASTRAL'
-      ReadOnly = True
-      TabOrder = 18
       Text = ''
     end
   end

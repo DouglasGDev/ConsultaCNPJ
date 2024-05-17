@@ -37,7 +37,6 @@ type
     edtDDD2: TLabeledEdit;
     edtTelefone2: TLabeledEdit;
     edtEmail: TLabeledEdit;
-    edtSituacaoCadastral: TLabeledEdit;
     procedure btnFecharClick(Sender: TObject);
     procedure btnBuscarCNPJClick(Sender: TObject);
   private
@@ -73,27 +72,27 @@ begin
       case RESTResponse.StatusCode of
         200: begin
                JSONObject := TJSONObject.ParseJSONValue(TEncoding.UTF8.GetBytes(RESTResponse.Content), 0) as TJSONObject;
-                 try
-                   edtRazaoSocial.Text :=  JSONObject.FindValue('razao_social').Value;
-                   edtFantasia.Text :=  JSONObject.FindValue('estabelecimento.nome_fantasia').Value;
-                   edtCNPJ.Text :=  JSONObject.FindValue('estabelecimento.cnpj').Value;
-                   edtTipoLogradouro.Text :=  JSONObject.FindValue('estabelecimento.tipo_logradouro').Value;
-                   edtLogradouro.Text :=  JSONObject.FindValue('estabelecimento.logradouro').Value;
-                   edtNumero.Text :=  JSONObject.FindValue('estabelecimento.numero').Value;
-                   edtBairro.Text :=  JSONObject.FindValue('estabelecimento.bairro').Value;
-                   edtCEP.Text := JSONObject.FindValue('estabelecimento.cep').Value;
-                   edtDDD.Text := JSONObject.FindValue('estabelecimento.ddd1').Value;
-                   edtTelefone.Text := JSONObject.FindValue('estabelecimento.telefone1').Value;
-                   edtDDD2.Text := JSONObject.FindValue('estabelecimento.ddd2').Value;
-                   edtTelefone2.Text := JSONObject.FindValue('estabelecimento.telefone2').Value;
-                   edtEmail.Text := JSONObject.FindValue('estabelecimento.email').Value;
-                   edtEstado.Text :=  JSONObject.FindValue('estabelecimento.estado.sigla').Value;
-                   edtCidade.Text :=  JSONObject.FindValue('estabelecimento.cidade.nome').Value;
-                   edtComplemento.Text :=  JSONObject.FindValue('estabelecimento.complemento').Value;
-                   edtSituacaoCadastral.Text :=  JSONObject.FindValue('estabelecimento.situacao_cadastral').Value;
-                   edtIE.Text := JSONObject.FindValue('estabelecimento.inscricoes_estaduais[0].inscricao_estadual').Value;
-                   edtIEAtivo.Text :=  JSONObject.FindValue('estabelecimento.inscricoes_estaduais[0].ativo').Value;
-                 finally
+               try
+                 edtRazaoSocial.Text :=  JSONObject.FindValue('razao_social').Value;
+                 edtFantasia.Text :=  JSONObject.FindValue('estabelecimento.nome_fantasia').Value;
+                 edtCNPJ.Text :=  JSONObject.FindValue('estabelecimento.cnpj').Value;
+                 edtTipoLogradouro.Text :=  JSONObject.FindValue('estabelecimento.tipo_logradouro').Value;
+                 edtLogradouro.Text :=  JSONObject.FindValue('estabelecimento.logradouro').Value;
+                 edtNumero.Text :=  JSONObject.FindValue('estabelecimento.numero').Value;
+                 edtBairro.Text :=  JSONObject.FindValue('estabelecimento.bairro').Value;
+                 edtCEP.Text := JSONObject.FindValue('estabelecimento.cep').Value;
+                 edtDDD.Text := JSONObject.FindValue('estabelecimento.ddd1').Value;
+                 edtTelefone.Text := JSONObject.FindValue('estabelecimento.telefone1').Value;
+                 edtDDD2.Text := JSONObject.FindValue('estabelecimento.ddd2').Value;
+                 edtTelefone2.Text := JSONObject.FindValue('estabelecimento.telefone2').Value;
+                 edtEmail.Text := JSONObject.FindValue('estabelecimento.email').Value;
+                 edtEstado.Text :=  JSONObject.FindValue('estabelecimento.estado.sigla').Value;
+                 edtCidade.Text :=  JSONObject.FindValue('estabelecimento.cidade.nome').Value;
+                 edtComplemento.Text :=  JSONObject.FindValue('estabelecimento.complemento').Value;
+                 edtIEAtivo.Text :=  JSONObject.FindValue('estabelecimento.inscricoes_estaduais[0].ativo').Value;
+                 edtIE.Text := JSONObject.FindValue('estabelecimento.inscricoes_estaduais[0].inscricao_estadual').Value;
+
+               finally
                  JSONObject.Free;
                end;
              end;
@@ -109,7 +108,6 @@ begin
     end;
   finally
     RESTClient.ResetToDefaults;
-    RESTRequest.ResetToDefaults;
   end;
 end;
 

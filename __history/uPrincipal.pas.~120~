@@ -37,7 +37,6 @@ type
     edtDDD2: TLabeledEdit;
     edtTelefone2: TLabeledEdit;
     edtEmail: TLabeledEdit;
-    edtSituacaoCadastral: TLabeledEdit;
     procedure btnFecharClick(Sender: TObject);
     procedure btnBuscarCNPJClick(Sender: TObject);
   private
@@ -90,7 +89,6 @@ begin
                    edtEstado.Text :=  JSONObject.FindValue('estabelecimento.estado.sigla').Value;
                    edtCidade.Text :=  JSONObject.FindValue('estabelecimento.cidade.nome').Value;
                    edtComplemento.Text :=  JSONObject.FindValue('estabelecimento.complemento').Value;
-                   edtSituacaoCadastral.Text :=  JSONObject.FindValue('estabelecimento.situacao_cadastral').Value;
                    edtIE.Text := JSONObject.FindValue('estabelecimento.inscricoes_estaduais[0].inscricao_estadual').Value;
                    edtIEAtivo.Text :=  JSONObject.FindValue('estabelecimento.inscricoes_estaduais[0].ativo').Value;
                  finally
@@ -109,7 +107,6 @@ begin
     end;
   finally
     RESTClient.ResetToDefaults;
-    RESTRequest.ResetToDefaults;
   end;
 end;
 

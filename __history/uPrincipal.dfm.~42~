@@ -4,7 +4,7 @@ object frmPrincipal: TfrmPrincipal
   BorderStyle = bsNone
   Caption = 'CONSULTA'
   ClientHeight = 619
-  ClientWidth = 841
+  ClientWidth = 921
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -16,13 +16,14 @@ object frmPrincipal: TfrmPrincipal
   object pnlHeader: TPanel
     Left = 0
     Top = 0
-    Width = 841
+    Width = 921
     Height = 80
     Align = alTop
     BevelOuter = bvNone
     Color = clTeal
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 841
     object edtBuscaCNPJ: TEdit
       Left = 56
       Top = 29
@@ -44,13 +45,14 @@ object frmPrincipal: TfrmPrincipal
   object pnlFooter: TPanel
     Left = 0
     Top = 539
-    Width = 841
+    Width = 921
     Height = 80
     Align = alBottom
     BevelOuter = bvNone
     Color = clTeal
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 841
     object btnFechar: TBitBtn
       Left = 744
       Top = 28
@@ -64,13 +66,14 @@ object frmPrincipal: TfrmPrincipal
   object pnlBody: TPanel
     Left = 0
     Top = 80
-    Width = 841
+    Width = 921
     Height = 459
     Align = alClient
     BevelOuter = bvSpace
     Color = 16768959
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 841
     object edtRazaoSocial: TLabeledEdit
       Left = 8
       Top = 22
@@ -93,6 +96,102 @@ object frmPrincipal: TfrmPrincipal
       EditLabel.Caption = 'FANTASIA'
       ReadOnly = True
       TabOrder = 1
+      Text = ''
+    end
+    object edtCNPJ: TLabeledEdit
+      Left = 534
+      Top = 22
+      Width = 139
+      Height = 23
+      EditLabel.Width = 27
+      EditLabel.Height = 15
+      EditLabel.Caption = 'CNPJ'
+      ReadOnly = True
+      TabOrder = 2
+      Text = ''
+    end
+    object edtTipoLogradouro: TLabeledEdit
+      Left = 8
+      Top = 62
+      Width = 105
+      Height = 23
+      EditLabel.Width = 107
+      EditLabel.Height = 15
+      EditLabel.Caption = 'TIPO LOGRADOURO'
+      ReadOnly = True
+      TabOrder = 3
+      Text = ''
+    end
+    object edtLogradouro: TLabeledEdit
+      Left = 119
+      Top = 62
+      Width = 146
+      Height = 23
+      EditLabel.Width = 79
+      EditLabel.Height = 15
+      EditLabel.Caption = 'LOGRADOURO'
+      ReadOnly = True
+      TabOrder = 4
+      Text = ''
+    end
+    object edtNumero: TLabeledEdit
+      Left = 271
+      Top = 62
+      Width = 92
+      Height = 23
+      EditLabel.Width = 50
+      EditLabel.Height = 15
+      EditLabel.Caption = 'NUMERO'
+      ReadOnly = True
+      TabOrder = 5
+      Text = ''
+    end
+    object edtIE: TLabeledEdit
+      Left = 685
+      Top = 22
+      Width = 139
+      Height = 23
+      EditLabel.Width = 119
+      EditLabel.Height = 15
+      EditLabel.Caption = 'INSCRI'#199#195'O ESTADUAL'
+      ReadOnly = True
+      TabOrder = 6
+      Text = ''
+    end
+    object edtIEAtivo: TLabeledEdit
+      Left = 831
+      Top = 22
+      Width = 73
+      Height = 23
+      EditLabel.Width = 45
+      EditLabel.Height = 15
+      EditLabel.Caption = 'I.E/Ativo'
+      ReadOnly = True
+      TabOrder = 7
+      Text = ''
+    end
+    object edtComplemento: TLabeledEdit
+      Left = 369
+      Top = 62
+      Width = 159
+      Height = 23
+      EditLabel.Width = 87
+      EditLabel.Height = 15
+      EditLabel.Caption = 'COMPLEMENTO'
+      ReadOnly = True
+      TabOrder = 8
+      Text = ''
+    end
+    object edtBairro: TLabeledEdit
+      Left = 534
+      Top = 62
+      Width = 139
+      Height = 23
+      EditLabel.Width = 41
+      EditLabel.Height = 15
+      EditLabel.Caption = 'BAIRRO'
+      ReadOnly = True
+      TabOrder = 9
       Text = ''
     end
   end
