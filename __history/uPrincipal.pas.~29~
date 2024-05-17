@@ -19,7 +19,10 @@ type
     RESTRequest: TRESTRequest;
     RESTResponse: TRESTResponse;
     RESTClient: TRESTClient;
-    edtRazaoSocial: TEdit;
+    edtRazaoSocial: TLabeledEdit;
+    edtFantasia: TLabeledEdit;
+    edtCNPJ: TLabeledEdit;
+    edtEmail: TLabeledEdit;
     procedure btnFecharClick(Sender: TObject);
     procedure btnBuscarCNPJClick(Sender: TObject);
   private
@@ -27,7 +30,7 @@ type
   public
     { Public declarations }
     const
-      _URL_CONSULTAR_CNPJ = 'https://brasilapi.com.br/api/cep/v1/%s';
+      _URL_CONSULTAR_CNPJ = 'https://brasilapi.com.br/api/cnpj/v1/%s';
   end;
 
 var
@@ -42,22 +45,21 @@ var
   LCNPJ: String;
   JSONObject: TJSONObject;
 begin
-  //ResultadoConsultarCEP.Clear;
+  edtBuscaCNPJ.SetFocus;
   LCNPJ := Trim(edtBuscaCNPJ.Text);
-
   RESTClient.BaseURL := Format(_URL_CONSULTAR_CNPJ, [LCNPJ]);
   RESTClient.SecureProtocols := [THTTPSecureProtocol.TLS12];
   RESTRequest.Method := rmGet;
-
   try
     try
       RESTRequest.Execute;
-
       case RESTResponse.StatusCode of
         200: begin
                JSONObject := TJSONObject.ParseJSONValue(TEncoding.UTF8.GetBytes(RESTResponse.Content), 0) as TJSONObject;
                try
                  edtRazaoSocial.Text :=  JSONObject.GetValue('razao_social').Value;
+                 edtFantasia.Text :=  JSONObject.GetValue('nome_fantasia').Value;
+                 edtCNPJ.Text :=  JSONObject.GetValue('cnpj').Value;
                finally
                  JSONObject.Free;
                end;

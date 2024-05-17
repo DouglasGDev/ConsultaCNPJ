@@ -23,7 +23,6 @@ object frmPrincipal: TfrmPrincipal
     Color = clTeal
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 628
     object edtBuscaCNPJ: TEdit
       Left = 56
       Top = 29
@@ -39,6 +38,7 @@ object frmPrincipal: TfrmPrincipal
       Height = 23
       Caption = 'Buscar CNPJ'
       TabOrder = 1
+      OnClick = btnBuscarCNPJClick
     end
   end
   object pnlFooter: TPanel
@@ -51,8 +51,6 @@ object frmPrincipal: TfrmPrincipal
     Color = clTeal
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 401
-    ExplicitWidth = 628
     object btnFechar: TBitBtn
       Left = 744
       Top = 28
@@ -73,10 +71,42 @@ object frmPrincipal: TfrmPrincipal
     Color = 16768959
     ParentBackground = False
     TabOrder = 2
-    ExplicitLeft = 312
-    ExplicitTop = 208
-    ExplicitWidth = 185
-    ExplicitHeight = 80
+    object edtRazaoSocial: TLabeledEdit
+      Left = 8
+      Top = 22
+      Width = 257
+      Height = 23
+      EditLabel.Width = 82
+      EditLabel.Height = 15
+      EditLabel.Caption = 'RAZ'#195'O SOCIAL'
+      ReadOnly = True
+      TabOrder = 0
+      Text = ''
+    end
+    object edtFantasia: TLabeledEdit
+      Left = 271
+      Top = 22
+      Width = 257
+      Height = 23
+      EditLabel.Width = 52
+      EditLabel.Height = 15
+      EditLabel.Caption = 'FANTASIA'
+      ReadOnly = True
+      TabOrder = 1
+      Text = ''
+    end
+    object edtCNPJ: TLabeledEdit
+      Left = 534
+      Top = 22
+      Width = 257
+      Height = 23
+      EditLabel.Width = 27
+      EditLabel.Height = 15
+      EditLabel.Caption = 'CNPJ'
+      ReadOnly = True
+      TabOrder = 2
+      Text = ''
+    end
   end
   object RESTRequest: TRESTRequest
     Client = RESTClient

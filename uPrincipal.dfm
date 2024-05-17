@@ -107,6 +107,18 @@ object frmPrincipal: TfrmPrincipal
       TabOrder = 2
       Text = ''
     end
+    object edtEmail: TLabeledEdit
+      Left = 8
+      Top = 62
+      Width = 257
+      Height = 23
+      EditLabel.Width = 39
+      EditLabel.Height = 15
+      EditLabel.Caption = 'E-MAIL'
+      ReadOnly = True
+      TabOrder = 3
+      Text = ''
+    end
   end
   object RESTRequest: TRESTRequest
     Client = RESTClient

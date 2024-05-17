@@ -22,6 +22,7 @@ type
     edtRazaoSocial: TLabeledEdit;
     edtFantasia: TLabeledEdit;
     edtCNPJ: TLabeledEdit;
+    edtEmail: TLabeledEdit;
     procedure btnFecharClick(Sender: TObject);
     procedure btnBuscarCNPJClick(Sender: TObject);
   private
@@ -59,6 +60,7 @@ begin
                  edtRazaoSocial.Text :=  JSONObject.GetValue('razao_social').Value;
                  edtFantasia.Text :=  JSONObject.GetValue('nome_fantasia').Value;
                  edtCNPJ.Text :=  JSONObject.GetValue('cnpj').Value;
+                 edtEmail.Text :=  JSONObject.GetValue('email').Value;
                finally
                  JSONObject.Free;
                end;
