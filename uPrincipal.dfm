@@ -24,7 +24,7 @@ object frmPrincipal: TfrmPrincipal
     Color = clTeal
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = -6
+    ExplicitWidth = 989
     object lblConsultaCNPJ: TLabel
       Left = 56
       Top = 8
@@ -74,8 +74,8 @@ object frmPrincipal: TfrmPrincipal
     Color = clTeal
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 539
-    ExplicitWidth = 1005
+    ExplicitTop = 500
+    ExplicitWidth = 989
     object btnFechar: TBitBtn
       Left = 909
       Top = 28
@@ -96,8 +96,8 @@ object frmPrincipal: TfrmPrincipal
     Color = 16768959
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 1005
-    ExplicitHeight = 459
+    ExplicitWidth = 989
+    ExplicitHeight = 420
     object Label1: TLabel
       Left = 534
       Top = 5
